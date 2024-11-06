@@ -4,7 +4,15 @@ Welcome to my Codewars solutions repository! This repo contains my solutions to 
 
 ## Repository Structure
 
-📂 Codewars ├── 📁 JavaScript │ ├── 6kyu │ │ ├── solution1.js │ │ ├── solution2.js │ └── 7kyu │ ├── solution3.js │ ├── solution4.js └── README.md
+📂 Codewars
+├── 📁 JavaScript
+│   ├── 6kyu
+│   │   ├── solution1.js
+│   │   ├── solution2.js
+│   └── 7kyu
+│       ├── solution3.js
+│       ├── solution4.js
+└── README.md
 
 ### Folder Explanation
 
