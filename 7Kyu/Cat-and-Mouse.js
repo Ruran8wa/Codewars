@@ -8,7 +8,7 @@
 // "C.....m" returns "Escaped!" <-- more than three characters between
 
 // "C...m" returns "Caught!" <-- as there are three characters
-//  between the two, the cat can jump.
+//  between the two, the cat can jump
 
 function catMouse(x){
     let count = 0
