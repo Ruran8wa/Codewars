@@ -38,4 +38,4 @@ function imperfectFibRabbits(n, b, l) {
      }
  
      return ageGroups.reduce((sum, count) => sum + count, 0n);
- }
+ }ko
