@@ -4,16 +4,9 @@ public static class Kata
     {
         int sum = 0;
         if(value < 0) return 0;
-        for(int i=1; i < value; i++){
-            if(i % 5 == 0 && i % 3 == 0){
-                sum += i;
-            }else if(i % 5 == 0){
-                sum += i;
-            }else if(i % 3 == 0){
-                sum += i;
-            }else{
-                continue;
-            }
+        for(int i=3; i < value; i++)
+        {
+            if (i % 5 == 0 && i % 3 == 0) sum += i;
         }
         return sum;
     }
