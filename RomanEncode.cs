@@ -1,40 +1,43 @@
 using System;
+using System.Text;
 
-public class RomanDecode
+public class RomanEncode
 {
-    public static int Solution(string num)
+    private static string Solution(int num)
     {
-        Dictionary<char, int> map = new Dictionary<char, int>()
-        {
-            { 'I', 1 },
-            { 'V', 5 },
-            { 'X', 10 },
-            { 'L', 50 },
-            { 'C', 100 },
-            { 'D', 500 },
-            { 'M', 1000 }
-        };
+        (int value, string symbol)[] map =
+        [
+            (1000, "M"),
+            (900, "CM"),
+            (500, "D"),
+            (400, "CD"),
+            (100, "C"),
+            (90, "XC"),
+            (50, "L"),
+            (40, "XL"),
+            (10, "X"),
+            (9, "IX"),
+            (5, "V"),
+            (4, "IV"),
+            (1, "I")
+        ];
 
-        int result = 0;
-
-        for (int i = 0; i < num.Length; i++)
+        var result = new StringBuilder();
+       
+        foreach(var (value, symbol) in map)
         {
-            int current = map[num[i]];
-            if(i < num.Length - 1 && current < map[num[i + 1]])
+            while (num >= value)
             {
-                result -= current;
-            }
-            else
-            {
-                result += current;
+                result.Append(symbol);
+                num -= value;
             }
         }
-
-        return result;
+       
+        return result.ToString();
     }
 
     public static void Main(string[] args)
     {
-        RomanDecode.Solution("CD");
+        RomanEncode.Solution(1990);
     }
 }
